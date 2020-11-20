@@ -8,7 +8,7 @@
 #  contact: mail@jroering.com
  
    
-def handleContent(stringText):
+def handleline(stringText):
     word = stringText
     n=1
     length=""
@@ -48,20 +48,20 @@ for line in textInput:
     #gerade reihen (schwarz)
     if (count % 2)==0:
         colour = "S"
-        content = content.replace("0","L").replace("1","R")
+        line = line.replace("0","L").replace("1","R")
     #ungerade reihen (weiss)    
     else:
         colour = "W"
-        content = content.replace("0","R").replace("1","L")
+        line = line.replace("0","R").replace("1","L")
     
     #zeilenanfang schreiben
     prefix = "RR {} {}: ".format(count, colour)
     
     #gleiche maschen zählen, erste masche als R angeben
-    content = handleContent("R" + content )
+    line = handleline("R" + line )
     
     #textdatei schreiben, inklusive rva und zeilenende
-    textOutput.write(prefix + content + "rva" + "\n") 
+    textOutput.write(prefix + line + "rva" + "\n") 
 
 # Closing files 
 textInput.close() 
