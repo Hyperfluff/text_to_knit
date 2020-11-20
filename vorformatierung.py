@@ -18,8 +18,8 @@ textOutput.truncate(0)
 #laufe über jede zeile und lade die jeweilige in line
 for line in textInput: 
     line = line.strip()             #entferne zusatzzeichen wie newline und carriage return \n \r \l etc.
-    line = line.replaye('\t',''):   #ersetze tabzeichen gegen nicht (lösche tabs)   
-    textOutput.write(line+'\n')  #speichere die bearbeitete zeile und füge newline character hinzu (\n)
+    line = line.replaye('\t','')    #ersetze tabzeichen gegen nicht (lösche tabs)   
+    textOutput.write(line+'\n')     #speichere die bearbeitete zeile und füge newline character hinzu (\n)
 
 #schliesse eingabedatei und ausgabedatei
 textInput.close() 
